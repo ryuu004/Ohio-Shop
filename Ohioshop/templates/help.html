@@ -1,0 +1,63 @@
+{% include 'base.html' %}
+
+	{% block content %}
+<style>
+
+    .body{
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    }
+
+
+	.help{
+		margin-top: 20px;
+		background-color: white;
+		width: 1000px;
+		height: 700px;
+	}
+
+	h1{
+		margin-left: 20px;
+		color: #616161;
+		font-family: Arial;
+	}
+
+	.content{
+		margin: 50px;
+		font-family: Arial;
+	}
+
+	h2{
+		font-size: 28px;
+		color: #023e8a;
+	}
+
+	p{
+		font-size: 14px;
+		margin: 40px;
+		margin-top: 0px;
+		margin-bottom: 80px;
+	}
+
+</style>
+<div class="body">
+    <div class="help">
+    	<h1>How It Works?</h1>
+    	<div class="content">
+    	<h2>Homepage Tab</h2>
+    	<p>In the Homepage tab the items are organized in the left side-bar.
+        You can choose from the following: Trending, Hot, Onsale, Best Seller, Recommended,
+        Creator's Choice.</p>
+        <h2>Buy an Item</h2>
+        <p>To buy an item just click the item you want and you will direct to the buying section.
+Fill up the form and click buy now. The staff will handle your orders and they will
+notify you when your order is verified.</p>
+        <h2>Contact us</h2>
+        <p>If you have concern in our website, go to contact page. In the contact page please
+provide your fullname and you email address. Enter your message or question for us 
+and wait for our reply.</p>
+        </div>
+    </div>
+</div>
+	{% endblock %}

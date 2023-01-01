@@ -1,0 +1,88 @@
+{% include 'base.html' %}
+
+	{% block content %}
+	
+<style>
+	
+	.contactus{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.title{
+		font-weight: bold;
+		font-family: Arial;
+		text-align: center;
+		width: 800px;
+		color: #090979;
+	}
+
+	.statement{
+		font-family: Arial;
+		text-align: center;
+		width: 800px;
+	}
+
+	.send{
+		background-color: #011d78;
+		box-shadow: 0px 0px 5px black;
+		width: 600px;
+		height: 600px;
+	}
+    
+    h3{
+    	color: white;
+    	margin: 40px;
+    	font-family: Arial;
+    }
+    
+    form{
+    	margin-left: 50px;
+    }
+
+    input{
+    	padding: 10px;
+    	color: white;
+    	margin-bottom: 20px;
+    	border: none;
+    	border-bottom: 1px white solid;
+    	background-color: #011d78;
+    	width: 500px;
+    	height: 50px;
+    }
+
+    input[type=submit]{
+    	background-color: #145ede;
+    	margin: 30px;
+    	margin-left: 450px;
+    	border-radius: 30px;
+    	border: none;
+    	width: 100px;
+    }
+
+    input[type=submit]:hover{
+    	border: solid 1px white;
+    }
+
+</style>
+
+<div class="contactus">
+	<div class="title">
+	    <h1>Connect With Us</h1>
+	</div>
+	<div class="statement">
+	    <p>The staff will immediately reply and answers of the customers concern. Please provide
+           a clear message or questions in able for us to help you. </p>
+    </div>
+    <div class="send">
+    	<h3>Send Message</h3>
+    	<form>
+    		<input type="text" placeholder="Fullname">
+    		<input type="text" placeholder="Email">
+    		<input type="text" placeholder="Message">
+    	</form>
+    	    <input type="submit" value="SEND">
+    </div>
+</div>
+	{% endblock %}

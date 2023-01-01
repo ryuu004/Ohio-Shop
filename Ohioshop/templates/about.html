@@ -1,0 +1,71 @@
+{% load static %}
+{% include 'base.html' %}
+
+	{% block content %}
+<style>
+
+	.body{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.title{
+		width: 500px;
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 48px;
+		color: #090979;
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	.about{
+		background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+		color: white;
+		padding: 40px;
+		margin-top: 40px;
+		width: 800px;
+		font-size: 20px;
+	}
+
+	.socials{
+		display: flex;
+		justify-content: center;
+	}
+
+	img{
+		margin-top: 20px;
+		width: 40px;
+		height: 40px;
+		transition: ease-in-out 0.2s;
+	}
+
+	img:hover{
+		transform: scale(1.2);
+	}
+
+</style>
+<div class="body">
+    <div class="title">
+    	ABOUT US
+    </div>
+    <div class="about">
+    	A website that looks for customer's wants and needs. Inspired by a trend 
+    on tiktok "Ohio". A meme based website, full of stupidity but 
+    gives me a lot of knowledge.<br><br>  
+    
+    This website is my first project built in able     for me 
+    to grow as a full-stack developer. I used Django, HTML and CSS.
+    I apologize that this might be lacking of features.<br><br>
+    
+    This website still need a lot of improvements and developments. I will work for that time
+    by time so that the user should have a great experience in my website.
+    </div>
+</div>
+<div class="socials">
+	<a href="https://github.com/ryuu004"><img src="{% static 'images/GitHub-Mark-removebg-preview.png' %}"></a>
+	<a href="https://www.facebook.com/rhyio.tahari.54"><img src="{% static 'images/Facebook-logo.png' %}"></a>
+	<a href="https://www.instagram.com/1ryudgaf/"><img src="{% static 'images/Instagram-logo.png' %}"></a>
+</div>
+	{% endblock %}

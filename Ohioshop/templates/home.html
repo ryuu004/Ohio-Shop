@@ -1,0 +1,265 @@
+{% load static %}
+
+{% include 'base.html' %}
+
+	{% block content %}
+
+<style>
+    .side-bar{
+    	background-color: #023047;
+    	margin-bottom: 0px;
+    }
+
+    .side-bar ul{
+    	position: sticky;
+    	top: 0px;
+	    margin: 0px;
+		padding: 0px;
+	    }
+
+	.side-bar li{
+	    list-style: none;
+	    }
+
+	.side-bar li a {
+	    font-size: 14px;
+	    font-family: Arial;
+	    text-decoration: none;
+	    padding: 20px;
+	    display: block;
+	    color: #219ebc;
+	    }
+
+	.side-bar li a:hover{
+	    	color: white;
+	    }
+
+	.body{
+		display: flex;
+	}
+
+	.products{
+		display: block;
+	}
+
+	.trending{
+		margin-top: 30px;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	} 
+
+	.trending a{
+		text-decoration: none;
+	}
+
+	.trending a .product_name{
+		color: black;
+	}
+
+	label{
+		margin-left: -90px;
+		width: 800px;
+		font-family: Arial;
+		font-size: 28px;
+		color: #616161;
+	}
+    
+
+	img{
+		width: 400px;
+		height: 400px;
+	}
+
+	.product{
+		width: 400px;
+		text-align: center;
+		margin: 50px;
+		background-color: white;
+	}
+
+	.product:hover{
+		box-shadow: 0px 0px 10px #808991;
+	}
+
+	.product_name{
+		margin: 0px;
+		padding: 10px;
+		font-family: Arial;
+		font-size: 24px;
+
+	}
+    
+    .product_price{
+    	margin: 0px;
+    	display: block;
+		padding-top: 30px;
+		padding-bottom: 40px;
+	}
+
+	.current_price{
+		margin: 0px;
+		font-family: Arial;
+		font-size: 28px;
+		color: #076b13;
+		padding-bottom: 10px;
+	}
+
+    
+    .product_price del {
+    	color: #252729;
+        font-weight: none;
+        font-size: 22px;
+    }
+
+    .hot{
+		margin-top: 30px;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	} 
+
+	.hot a{
+		text-decoration: none;
+	}
+
+	.hot a .product_name{
+		color: black;
+	}
+
+</style>
+<div class="body">
+	<div class="side-bar">
+    	<ul>
+    		<li><a href="#trending">Trending</a></li>
+    		<li><a href="#hot">Hot</a></li>
+    		<li><a href="#">On Sale</a></li>
+    		<li><a href="#">Best Seller</a></li>
+    		<li><a href="#">Recommended</a></li>
+    		<li><a href="#">Creator's Choice</a></li>
+    	</ul>
+    </div>
+    <div class="products">
+        <div class="trending">
+        	<label id="trending">Trending</label>
+            <div class="product">
+            	<a href="/buy">
+                <div class="img">
+                	<img src="{% static 'images/ohioshoes.jpg' %}">
+                </div>
+                <div class="product_name">
+            		Sapatos ni San Pedro
+            	</div>
+            	<div class="product_price">
+            		<div class="current_price">$599.99</div>
+            		<div><del>$1,299.99</del></div>
+            	</a>
+        	    </div>
+            </div>
+             <div class="product">
+             	<a href="/buy">
+                <div class="img">
+                	<img src="{% static 'images/ohiobrief.jpg' %}">
+                </div>
+                <div class="product_name">
+            		Limited Edition BEN10 Brief
+            	</div>
+            	<div class="product_price">
+            		<div class="current_price">$899.99</div>
+            		<div><del>$1,799.99</del></div>
+        	    </div>
+        	    </a>
+            </div>
+            <div class="product">
+            	<a href="/buy">
+                <div class="img">
+                	<img src="{% static 'images/ohiotshirt.jpg' %}">
+                </div>
+                <div class="product_name">
+            		Legend of Gusion T-Shirt Cotton
+            	</div>
+            	<div class="product_price">
+            		<div class="current_price">$1,999.99</div>
+            		<div><del>$2,999.99</del></div>
+        	    </div>
+        	    </a>
+            </div>
+            <div class="product">
+            	<a href="/buy">
+                <div class="img">
+                	<img src="{% static 'images/ohiohoodie.jpg' %}">
+                </div>
+                <div class="product_name">
+            		Ohio Hoodie
+            	</div>
+            	<div class="product_price">
+            		<div class="current_price">$2,999.99</div>
+            		<div><del>$5,999.99</del></div>
+        	    </div>
+        	    </a>    
+            </div>
+        </div>
+        <div class="hot">
+        	<label id="hot">Hot</label>
+            <div class="product">
+            	<a href="/buy">
+                <div class="img">
+                	<img src="{% static 'images/jordan.jpg' %}">
+                </div>
+                <div class="product_name">
+            		Original Jordan
+            	</div>
+            	<div class="product_price">
+            		<div class="current_price">$499.99</div>
+            		<div><del>$1,009.99</del></div>
+        	    </div>
+        	    </a>
+            </div>
+             <div class="product">
+             	<a href="/buy">
+                <div class="img">
+                	<img src="{% static 'images/nike.jpg' %}">
+                </div>
+                <div class="product_name">
+            		Real Mike
+            	</div>
+            	<div class="product_price">
+            		<div class="current_price">$399.99</div>
+            		<div><del>$999.99</del></div>
+        	    </div>
+        	    </a>
+            </div>
+            <div class="product">
+            	<a href="/buy">
+                <div class="img">
+                	<img src="{% static 'images/dress.jpg' %}">
+                </div>
+                <div class="product_name">
+            		Ohio Dress
+            	</div>
+            	<div class="product_price">
+            		<div class="current_price">$3,999.99</div>
+            		<div><del>$4,999.99</del></div>
+        	    </div>
+        	    </a>
+            </div>
+            <div class="product">
+            	<a href="/buy">
+                <div class="img">
+                	<img src="{% static 'images/gigachad.jpg' %}">
+                </div>
+                <div class="product_name">
+            		Gigachad sleeveless shirt
+            	</div>
+            	<div class="product_price">
+            		<div class="current_price">$899.99</div>
+            		<div><del>1,399.99</del></div>
+        	    </div>
+        	    </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
